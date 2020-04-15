@@ -65,7 +65,7 @@ nav a:hover {
 }
 
 .nav-mobile-button {
-    background: transparent;
+    background: rgba(255, 255, 255, 88%);
     position: absolute;
     left: 1rem;
     top: 0rem;

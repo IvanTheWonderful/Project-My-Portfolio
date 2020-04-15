@@ -4,7 +4,7 @@ const div2 = document.getElementById("nav-mobile-button-div2");
 const div3 = document.getElementById("nav-mobile-button-div3");
 const div4 = document.getElementById("nav-mobile-button-div4");
 const menu = document.getElementById("nav-mobile-list");
-const backgroundBlur = document.getElementById("nav-mobile-backgournd_overlay");
+const backgroundOverlay = document.getElementById("nav-mobile-backgournd_overlay");
 
 // change the style of the menu button by adding and removing class
 function toggleButton() {
@@ -43,17 +43,17 @@ function toggleMenu() {
 
 // show/hide blurry background together with the draw menu
 function toggleBackground() {
-	if(backgroundBlur.classList.contains("nav-mobile-background_overlay-hidden")) {
-		backgroundBlur.classList.add("nav-mobile-background_overlay-shown");
-		backgroundBlur.classList.remove("nav-mobile-background_overlay-hidden");
+	if(backgroundOverlay.classList.contains("nav-mobile-background_overlay-hidden")) {
+		backgroundOverlay.classList.add("nav-mobile-background_overlay-shown");
+		backgroundOverlay.classList.remove("nav-mobile-background_overlay-hidden");
 	} else {
-		backgroundBlur.classList.add("nav-mobile-background_overlay-hidden");
-		backgroundBlur.classList.remove("nav-mobile-background_overlay-shown");
+		backgroundOverlay.classList.add("nav-mobile-background_overlay-hidden");
+		backgroundOverlay.classList.remove("nav-mobile-background_overlay-shown");
 	}
 }
 
 // combine both functions above
-function toggleButtonAndMenu() {
+function toggleAll() {
 	toggleButton();
 	toggleMenu();
 	toggleBackground();
