@@ -56,7 +56,7 @@ nav a:hover {
     z-index: 1;
 }
 
-.nav-mobile-backgournd_overlay-shown {
+.nav-mobile-background_overlay-shown {
     animation: appear 0.2s forwards;
 }
 
