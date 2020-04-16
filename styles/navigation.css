@@ -7,7 +7,6 @@ nav {
     justify-content: space-evenly;
     width: 100%;
     padding: 10px 0;
-    background: white;
     z-index: 99;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
@@ -27,10 +26,9 @@ nav a:hover {
 
 .nav-desktop a, .nav-desktop .fa {
     display: none;
-
     color: #585a5e;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .nav-desktop-socialMedia a {
@@ -43,7 +41,7 @@ nav a:hover {
     position: absolute;
     left: 0;
     width: 100vw;
-    background: white;
+    /* background: white; */
 }
 
 #nav-mobile-backgournd_overlay {
@@ -58,10 +56,12 @@ nav a:hover {
 
 .nav-mobile-background_overlay-shown {
     animation: appear 0.2s forwards;
+    display: initial;
 }
 
 .nav-mobile-background_overlay-hidden {
     animation: disappear 0.2s forwards;
+    display: none;
 }
 
 .nav-mobile-button {
@@ -177,6 +177,7 @@ nav a:hover {
     }
     100% {
         opacity: 0%;
+        display: none;
     }
 }
 
@@ -230,6 +231,9 @@ nav a:hover {
 
 /* Start: media query */
 @media only screen and (min-width:900px) {
+    .nav {
+        background-color: white;
+    }
     
     .nav-mobile {
         display: none;

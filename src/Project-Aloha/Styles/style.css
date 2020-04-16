@@ -1,39 +1,39 @@
-/* Import fonts from folder Components/fonts/ */
+/* Import fonts from folder ./Project Goal & Components/fonts/ */
 @font-face {
     font-family: Playfair-Bold;
-    src: url("Components/fonts/PlayfairDisplay-Bold.otf") format("opentype");
+    src: url("./Project Goal & Components/fonts/PlayfairDisplay-Bold.otf") format("opentype");
 }
 @font-face {
     font-family: Playfair-BoldItalic;
-    src: url("Components/fonts/PlayfairDisplay-BoldItalic.otf") format("opentype");
+    src: url("./Project Goal & Components/fonts/PlayfairDisplay-BoldItalic.otf") format("opentype");
 }
 @font-face {
     font-family: Playfair-Italic;
-    src: url("Components/fonts/PlayfairDisplay-Italic.otf") format("opentype");
+    src: url("./Project Goal & Components/fonts/PlayfairDisplay-Italic.otf") format("opentype");
 }
 @font-face {
     font-family: Playfair-Regular;
-    src: url("Components/fonts/PlayfairDisplay-Regular.otf") format("opentype");
+    src: url("./Project Goal & Components/fonts/PlayfairDisplay-Regular.otf") format("opentype");
 }
 @font-face {
     font-family: Raleway-Light;
-    src: url("Components/fonts/Raleway-Light.ttf") format("truetype");
+    src: url("./Project Goal & Components/fonts/Raleway-Light.ttf") format("truetype");
 }
 @font-face {
     font-family: Raleway-LightItalic;
-    src: url("Components/fonts/Raleway-LightItalic.ttf") format("truetype");
+    src: url("./Project Goal & Components/fonts/Raleway-LightItalic.ttf") format("truetype");
 }
 @font-face {
     font-family: Raleway-Medium;
-    src: url("Components/fonts/Raleway-Medium.ttf") format("truetype");
+    src: url("./Project Goal & Components/fonts/Raleway-Medium.ttf") format("truetype");
 }
 @font-face {
     font-family: Raleway-MediumItalic;
-    src: url("Components/fonts/Raleway-MediumItalic.ttf") format("truetype");
+    src: url("./Project Goal & Components/fonts/Raleway-MediumItalic.ttf") format("truetype");
 }
 
 /* Start of global properties */
-*{
+* {
     font-family: Raleway-Light;
 }
 
@@ -128,6 +128,11 @@ p{
     margin-top: 1em;
     padding: 0;
     overflow: hidden;
+    background-image: url("../Project Goal & Components/images/flower-bkgd.jpg");
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-color: rgba(63, 63, 63, 80%);
+    background-blend-mode: overlay;
 }
 
 .hero-background{
@@ -381,7 +386,11 @@ footer{
 @media only screen and (min-width:600px){
     body{
         font-size: 16px;
-    3
+    }
+
+    .hero{
+        background-size: contain;
+    }
 }
 
 @media only screen and (min-width:600px){
