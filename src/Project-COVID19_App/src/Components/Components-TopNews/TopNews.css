@@ -1,0 +1,114 @@
+.components-topnews-newsbox {
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+        "image"
+        "title"
+        "author";
+    place-items: center;
+    padding: 1rem;
+    border: oldlace 3px solid;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    width: calc(100vw - 5rem);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.components-topnews-newsbox img {
+    grid-area: image;    
+    width: 18rem;
+    height: min-content;
+    max-height: 14vh;
+}
+
+.components-topnews-newsbox a, .components-topnews a {
+    grid-area: title;
+    font-size: 1.3rem;
+    color: #02182b;
+}
+
+.components-topnews-newsbox a:hover {
+    color:#d7263d
+}
+
+.components-topnews-newsbox span {
+    grid-area: author;
+    color: #02182b;
+}
+
+.components-topnews-newsbox article {
+    display: none;
+}
+
+.components-topnews-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.components-topnews-button {
+    margin-bottom: 7rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .components-topnews-newsbox {
+        position: relative;
+        display: grid;
+        grid-template-areas: 
+            "image title"
+            "image author";
+        grid-template-columns: 1fr 4fr;
+        padding: 1rem;
+        column-gap: 2rem;
+        border: oldlace 3px solid;
+        margin-bottom: 0.5rem;
+        align-items: center;
+        width: calc(100vw - 5rem);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .components-topnews-newsbox img {
+        grid-area: image;    
+        width: min-content;
+        max-width: 18rem;
+        height: min-content;
+        max-height: 14vh;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .components-topnews-newsbox {
+        position: relative;
+        display: grid;
+        grid-template-areas: 
+        "image title"
+        "image author"
+        "image description";
+        grid-template-columns: 1fr 4fr;
+        padding: 1rem;
+        column-count: 2rem;
+        row-gap: 1rem;
+        border: oldlace 3px solid;
+        margin-bottom: 0.5rem;
+        align-items: center;
+        width: calc(100vw - 5rem);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .components-topnews-newsbox article {
+        display: initial;
+        grid-area: description;
+        font-size: 0.9rem;
+        max-width: 30rem;
+        text-align: start;
+    }
+
+    .components-topnews-newsbox img {
+        grid-area: image;    
+        width: 18rem;
+        height: min-content;
+        max-height: 17vh;
+    }
+}
