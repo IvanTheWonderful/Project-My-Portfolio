@@ -6,7 +6,6 @@ nav {
     top: 0;
     justify-content: space-evenly;
     width: 100%;
-    padding: 10px 0;
     z-index: 99;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
@@ -18,10 +17,13 @@ nav a:hover {
 
 /* Start: desktop version */
 .nav-desktop {
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    height: 2rem;
+    top: 0;
+    background: rgba(255, 255, 255, 0.88);
 }
 
 .nav-desktop a, .nav-desktop .fa {
@@ -39,6 +41,7 @@ nav a:hover {
 /* Start: mobile version */
 .nav-mobile {
     position: absolute;
+    top: 10px;
     left: 0;
     width: 100vw;
     /* background: white; */
@@ -237,6 +240,10 @@ nav a:hover {
     
     .nav-mobile {
         display: none;
+    }
+
+    .nav-desktop {
+        display: flex;
     }
 
     .nav-desktop a, .nav-desktop .fa {
