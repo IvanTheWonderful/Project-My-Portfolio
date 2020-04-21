@@ -65,23 +65,70 @@ body {
     align-items: center;
 }
 
-.work-cards div {
-    border: 1px black solid;
-    width: 80vw;
-    height: 25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 2rem;
-    background-size: contain;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 245, 238, 0.671);
-    background-blend-mode: overlay;
+.work h1 {
+    text-transform: capitalize;
 }
 
-.work-cards-aloha {
+.work-cards {
+    perspective: 800px;
+}
+
+.work-cards div {
+    transform-style: preserve-3d;
+    margin-bottom: 4rem;
+}
+
+.work-cards div img {
+    width: 100%;
+}
+
+.work-cards div:hover .work-cards-front {
+    animation: flip-front 0.3s forwards;
+}
+
+.work-cards div:hover .work-cards-back {
+    animation: flip-back 0.3s forwards;
+}
+
+.work-cards-front {
+    backface-visibility: hidden;
+    border: 1px black solid;
+    animation: reverse-front 0.3s forwards;
+}
+
+.work-cards-back {
+    backface-visibility: hidden;
+    border: 1px black solid;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotateY(180deg);
+    background-color: rgb(92, 209, 255);
+    animation: reverse-back 0.3s forwards;
+}
+
+.work-cards-back a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding: 1rem;
+    width: 7rem;
+}
+
+.work-cards-back a:nth-of-type(2n-1) {
+    background-color: wheat;
+}
+
+.work-cards-back a:nth-of-type(2n) {
+    background-color: aquamarine;
+}
+
+/* .work-cards-aloha {
     background-image: url("../images/project-aloha-screenshot.png");
 }
 
@@ -95,6 +142,61 @@ body {
 
 .work-cards-hallway_cafe {
     background-image: url("../images/project-hallway_cafe-screenshot.png");
-}
+} */
 /* section work: end */
+/* section contact: start */
+.contact, .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.contact form {
+    height: 23rem;
+}
+
+.contact form input, .contact form textarea {
+    width: 15rem;
+}
+/* section contact: end */
 /* main: end */
+
+/* keyframes: start */
+@keyframes flip-front {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes reverse-front {
+    0% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes flip-back {
+    0% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg)
+    }
+}
+
+@keyframes reverse-back {
+    0% {
+        transform: rotateY(360deg);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
