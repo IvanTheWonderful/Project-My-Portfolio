@@ -1,0 +1,12 @@
+.english {
+    color: grey;
+}
+
+.english:hover {
+    color: white;
+    opacity: 100%;
+}
+
+.chinese {
+    color: white;
+}

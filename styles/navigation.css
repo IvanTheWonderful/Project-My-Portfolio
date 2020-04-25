@@ -11,6 +11,27 @@ nav {
     letter-spacing: 2px;
 }
 
+/* Start: language switch */
+.nav-language {
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 30px;
+    padding: 0 0.5rem;
+}
+
+.english {
+    color: white;
+}
+
+.chinese {
+    color: grey;
+}
+
+.chinese:hover {
+    color: white;
+    opacity: 100%;
+}
+/* End: language switch */
+
 nav a:hover {
     opacity: 0.5;
 }

@@ -70,7 +70,8 @@ body {
 }
 
 .work-cards {
-    perspective: 800px;
+    width: 75%;
+    perspective: 3000px;
 }
 
 .work-cards div {
