@@ -75,6 +75,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .work-cards > div {
@@ -105,7 +106,8 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     position: absolute;
     top: 0;
@@ -113,6 +115,11 @@ body {
     transform: rotateY(180deg);
     background-color: rgb(92, 209, 255);
     animation: reverse-back 0.3s forwards;
+}
+
+.work-cards-back article {
+    text-align: center;
+    margin: 0 2rem;
 }
 
 .work-cards-back a {
