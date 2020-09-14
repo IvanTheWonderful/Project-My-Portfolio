@@ -34,10 +34,11 @@ body {
 /* section intro: end */
 /* section about: start */
 .about {
-    height: 100vh;
+    padding: 4rem 4rem;
     color: white;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-image: url(../images/about-background.jpg);
     background-size: cover;
@@ -56,6 +57,11 @@ body {
 
 .about h2 {
     text-transform: capitalize;
+}
+
+.about article {
+    text-align: center;
+    line-height: 1.6;
 }
 /* section about: end */
 /* section work: start */
